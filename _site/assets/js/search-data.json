@@ -1,0 +1,116 @@
+{"0": {
+    "doc": "Git Concepts",
+    "title": "Before you Begin",
+    "content": "Reference . ",
+    "url": "http://localhost:4000/git_concepts#before-you-begin",
+    "relUrl": "/git_concepts#before-you-begin"
+  },"1": {
+    "doc": "Git Concepts",
+    "title": "Git Concepts",
+    "content": ". | Before you Begin | . ",
+    "url": "http://localhost:4000/git_concepts",
+    "relUrl": "/git_concepts"
+  },"2": {
+    "doc": "Intro",
+    "title": "To better your experience of writing in code",
+    "content": "Download the following extensions in vscode: . | Markdown All in one | code runner (see youtube video on how to setup vscode for C++) | . ",
+    "url": "http://localhost:4000/intro/#to-better-your-experience-of-writing-in-code",
+    "relUrl": "/intro/#to-better-your-experience-of-writing-in-code"
+  },"3": {
+    "doc": "Intro",
+    "title": "Shortcuts in general pour toi",
+    "content": ". | Once Markdown all in one is installed, you can do ctrl+shift+v to see preview of markdown immediately | To run any C++ file it’s just ctrl+shift+n | If you want to bold any specific text in markdown just select the text by holding down ctrl+shift and using arrow keys to select the required text. Then once text is selected just do ctrl+b to bolden and ctrl+i to italicize . | click on tab after using - for normal bullet pointing to get sub-points | . | To get numbered list continuously, in-between two headings 1. and 2. all content should be indented with 4 spaces in the markdown script . | To shift between windows in ubuntu, just do windows_key+shift+right/left_arrow | To minimize or unmaximize any window in hold down alt and press space, then choose to minimize | To then maximize or move window to right half/left half of screen, windows_key+shift+right/left_arrow | . ",
+    "url": "http://localhost:4000/intro/#shortcuts-in-general-pour-toi",
+    "relUrl": "/intro/#shortcuts-in-general-pour-toi"
+  },"4": {
+    "doc": "Intro",
+    "title": "Intro",
+    "content": "For Jekyll reference see just_the_docs . The following pages are built in order to understand Computer Vision and Machine Learning . To deploy on heroku follow the steps in the link below (and use the gem files, rake files and proc files in this repo for reference) . The following files will need to be copied from this repo: . | config.ru | Rakefile | Procfile | static.json | config.yaml (modify this file as per requirement) | Gemfile | . And only if necessary: . | Gemfile.lock | remove _sites from .gitignore | . Run bundle once to intialize Run bundle exec jekyll serve Go to the specified webpage by the above command . After copying these files (or their necessary contents), install heroku cli and do heroku login: . curl https://cli-assets.heroku.com/install.sh | sh heroku login . Then directly start with heroku create as per the below link and the other steps necessary (git push heroku master) . Deploy jekyll on heroku . Finally, go to heroku page -&gt; settings -&gt; change the name of the app and find the url . ",
+    "url": "http://localhost:4000/intro/",
+    "relUrl": "/intro/"
+  },"5": {
+    "doc": "CS229 Recap",
+    "title": "ML Recap",
+    "content": " ",
+    "url": "http://localhost:4000/docs/ML_recap#ml-recap",
+    "relUrl": "/docs/ML_recap#ml-recap"
+  },"6": {
+    "doc": "CS229 Recap",
+    "title": "CS229 Recap",
+    "content": " ",
+    "url": "http://localhost:4000/docs/ML_recap",
+    "relUrl": "/docs/ML_recap"
+  },"7": {
+    "doc": "Recap of CS229 (Intro to ML)",
+    "title": "Regression",
+    "content": " ",
+    "url": "http://localhost:4000/docs/ML_recap/cs229.html#regression",
+    "relUrl": "/docs/ML_recap/cs229.html#regression"
+  },"8": {
+    "doc": "Recap of CS229 (Intro to ML)",
+    "title": "Linear Regression",
+    "content": " ",
+    "url": "http://localhost:4000/docs/ML_recap/cs229.html#linear-regression",
+    "relUrl": "/docs/ML_recap/cs229.html#linear-regression"
+  },"9": {
+    "doc": "Recap of CS229 (Intro to ML)",
+    "title": "Recap of CS229 (Intro to ML)",
+    "content": ". | Regression . | Linear Regression | . | . ",
+    "url": "http://localhost:4000/docs/ML_recap/cs229.html",
+    "relUrl": "/docs/ML_recap/cs229.html"
+  },"10": {
+    "doc": "Leetcode Data Structures",
+    "title": "Arrays",
+    "content": " ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html#arrays",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html#arrays"
+  },"11": {
+    "doc": "Leetcode Data Structures",
+    "title": "1. Maximum Subarray",
+    "content": ". Scrappy Solution . The solution timed out on the submission test cases . class Solution: def __init__(self): self.max_sum = -10000 def maxSubArray(self, nums: List[int]) -&gt; int: sliding_window = [] for i in nums: if not sliding_window: sliding_window.append(i) curr_sum = self.find_sum(sliding_window) self.save_sum(curr_sum) elif self.find_sum(sliding_window) &lt; 0: sliding_window = [] sliding_window.append(i) curr_sum = self.find_sum(sliding_window) self.save_sum(curr_sum) else: sliding_window.append(i) curr_sum = self.find_sum(sliding_window) self.save_sum(curr_sum) return self.max_sum def find_sum(self, window): sum = 0 for i in window: sum += i return sum def save_sum(self, sums): if sums &gt; self.max_sum: self.max_sum = sums . Good Solution in Python . Reference . class Solution: def __init__(self): self.max_sum = None self.cur_sum = 0 def maxSubArray(self, nums: List[int]) -&gt; int: self.max_sum = nums[0] for i in nums: if self.cur_sum &lt; 0: self.cur_sum = 0 self.cur_sum += i self.max_sum = max(self.max_sum, self.cur_sum) return self.max_sum . Good Solution in C++ . ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html#1-maximum-subarray",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html#1-maximum-subarray"
+  },"12": {
+    "doc": "Leetcode Data Structures",
+    "title": "2. Contains Duplicate",
+    "content": ". Good Solution in Python . class Solution: def containsDuplicate(self, nums: List[int]) -&gt; bool: flag = False hashset = set() for i in nums: if i in hashset: flag = True break hashset.add(i) return flag . Good Solution in C++ . ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html#2-contains-duplicate",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html#2-contains-duplicate"
+  },"13": {
+    "doc": "Leetcode Data Structures",
+    "title": "3. Two Sum",
+    "content": ". Solution in Python . class Solution: def twoSum(self, nums: List[int], target: int) -&gt; List[int]: # we'll build the ref dict as we iterate over nums # after this hashmap is built, we'll then query it over time # ref_dict format is {value: index, value: index...} ref_dict = {nums[0]:0} # create a temp value which when added to another element gives target target_complement = 0 for i in range(1,len(nums)): target_complement = nums[i] if (target - target_complement) in ref_dict.keys(): return [ref_dict[(target-target_complement)], i] else: ref_dict[target_complement] = i . Solution in C++ . ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html#3-two-sum",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html#3-two-sum"
+  },"14": {
+    "doc": "Leetcode Data Structures",
+    "title": "4. Merge Sorted Array",
+    "content": ". Reference . Scrappy Python Solution (didn’t even work) . class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&gt; None: \"\"\" Do not return anything, modify nums1 in-place instead. \"\"\" # let's find the largest value in the m array and see if there's anything larger # than that in our n array. If there is something larger, then let's not consider # that for computation m = m + n # find largest in m largest = nums1[0] for i in range(m-n): if nums1[i] &gt; largest: largest = i # find all numbers in n array greater than largest for j in range(n): if nums2[j] &gt; largest: # then save this and all following elements (as they are sorted) # in the below specified position nums1[(m - n + j):] = nums2[j:] else: # now if it isn't larger than all values in nums1, we'll have # to fit it in somewhere # lets make use of the fact that it's ordered and start at the # middle of the nums1 array (essentially do binary search) target_index = None low = 0 high = m-n while low &lt;= high: mid = int((m-n)/2) if nums2[j] &gt; nums1[mid]: low = mid + 1 elif nums2[j] &lt; nums1[mid]: high = mid - 1 else: target_index = mid # if we haven't found it yet then just see check the low and high if target_index is None: if nums2[j] &gt; mid: nums1.insert(nums2[j], mid) else: nums1.insert(nums2[j], mid-1) . Good Solution in Python . ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html#4-merge-sorted-array",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html#4-merge-sorted-array"
+  },"15": {
+    "doc": "Leetcode Data Structures",
+    "title": "Leetcode Data Structures",
+    "content": ". | Arrays . | 1. Maximum Subarray . | Scrappy Solution | Good Solution in Python | Good Solution in C++ | . | 2. Contains Duplicate . | Good Solution in Python | Good Solution in C++ | . | 3. Two Sum . | Solution in Python | Solution in C++ | . | 4. Merge Sorted Array . | Scrappy Python Solution (didn’t even work) | Good Solution in Python | . | . | . ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course/data_strucutres.html",
+    "relUrl": "/docs/Leet_code_crash_course/data_strucutres.html"
+  },"16": {
+    "doc": "Home",
+    "title": "Interview Prep including ML/DL recaps and Leetcode questions",
+    "content": " ",
+    "url": "http://localhost:4000/#interview-prep-including-mldl-recaps-and-leetcode-questions",
+    "relUrl": "/#interview-prep-including-mldl-recaps-and-leetcode-questions"
+  },"17": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "http://localhost:4000/",
+    "relUrl": "/"
+  },"18": {
+    "doc": "Leetcode Data Structures Crash Course",
+    "title": "Leetcode Data Structures Crash Course",
+    "content": " ",
+    "url": "http://localhost:4000/docs/Leet_code_crash_course",
+    "relUrl": "/docs/Leet_code_crash_course"
+  }
+}
