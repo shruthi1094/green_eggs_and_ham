@@ -14,6 +14,10 @@ nav_order: 1
 {:toc}
 </details>
 
+# I DO NOT LIKE ARRAYS
+
+adlfka;sdlkfjadlsfja;dslkf
+
 # Arrays
 
 ## 1. Maximum Subarray
